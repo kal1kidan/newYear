@@ -1,0 +1,142 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #0f9d58, #f4c20d, #db4437);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+/* Background watermark */
+body::before {
+  content: "";
+  background: url("images/adey-flower.png") no-repeat center;
+  background-size: 70%;
+  opacity: 0.08;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Animate festive gradient */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+/* Hero Adey Abeba */
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Title */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3.5rem); /* scales with screen */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  line-height: 1.3;
+}
+
+/* Countdown */
+#countdown {
+  font-size: clamp(1.5rem, 5vw, 3rem); /* responsive size */
+  font-weight: bold;
+  margin: 20px 0 40px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+}
+
+/* Corner decorations */
+.corner-decor {
+  position: fixed;
+  width: clamp(50px, 10vw, 120px); /* responsive image size */
+  z-index: 2;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.corner-decor:hover {
+  transform: scale(1.1);
+}
+
+.top-right { top: 20px; right: 20px; }
+.bottom-left { bottom: 20px; left: 20px; }
+
+/* Button */
+button {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  padding: clamp(8px, 2vw, 15px) clamp(15px, 4vw, 30px);
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+button:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+/* Confetti */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Extra tweaks for tablets */
+@media (max-width: 1024px) {
+  .hero-image { max-height: 250px; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-image { max-height: 200px; }
+  h1 { margin-bottom: 15px; }
+  button { margin-top: 15px; }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  .hero-image { max-height: 160px; }
+  .corner-decor { width: 60px; }
+}
