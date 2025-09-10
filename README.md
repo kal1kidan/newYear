@@ -7,7 +7,7 @@ This project is part of my **#100DaysOfCode challenge** and focuses on creating 
 
 ## 🚀 Live Demo
 
-🔗 [View Project on Netlify](https://your-netlify-link.netlify.app)
+🔗 [View Project on Netlify]([https://your-netlify-link.netlify.app](https://newyear-project.netlify.app/))
 
 ---
 
@@ -57,3 +57,4 @@ This project helped me level up in:
 ## 👨‍💻 Author
 
 Made with ❤️ and a dash of **New Year spirit** as part of my **#100DaysOfCode challenge – Day 54** 🎆
+
