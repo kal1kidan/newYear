@@ -1,6 +1,6 @@
 // Countdown logic
 const countdownEl = document.getElementById('countdown');
-const newYearDate = new Date("September 12, 2025 00:00:00").getTime();
+const newYearDate = new Date("September 11, 2025 00:00:00").getTime();
 
 const interval = setInterval(() => {
   const now = new Date().getTime();
